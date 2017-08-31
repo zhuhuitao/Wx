@@ -1,0 +1,40 @@
+<!--viewUser.wxml-->
+<view class="user-top bg-fff mag-bt padd30">
+  <image class="user-img" src="../images/v_user_tx.jpg"></image>
+  <view class="user-top-xx">
+      <view class="user-tel">{{userTel}}</view>
+      <view class="user-name">姓名：{{userName}}</view>
+  </view>
+  <image class="finish-img" src="../images/finish-img.png"></image>
+</view>
+
+<view class="user-info bg-fff mag-bt">
+  <view class="user-info-li padd30"  bindtap="userCall">
+      <view class="v-user-c6f ico1">电话：</view>
+      <view class="v-user-cd">{{userTel}}</view>
+      <image src="../images/v_user_tel.png" class="v-user-tel"></image>
+  </view>
+  <view class="user-info-li padd30">
+    <view class="v-user-c6f ico2">地址：</view>
+    <view class="v-user-cd">{{userAddress}}</view>
+  </view>
+  <view class="user-info-li padd30">
+    <view class="v-user-c6f ico3">详细：</view>
+    <view class="v-user-cd">{{userDetailed}}</view>
+  </view>
+</view>
+
+<view class="user-xlh bg-fff mag-bt padd30">
+  <view class="xlh-color">设备序列号：</view>
+  <view class="xlh-nb">{{serialNb}}</view>
+</view>
+
+<view class="user-qsxq bg-fff">
+  <block wx:for-items="{{list}}" wx:key="item">
+  <view class="qsxq-li">
+      <view class="qsxq-name">{{item.qName}}</view>
+      <view class="qsxq-nb">{{item.qStatus}}</view>
+  </view>
+  </block>
+</view>
+

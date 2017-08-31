@@ -1,0 +1,61 @@
+<!--deviceInfo.wxml-->
+<view class="dvinfo-comm">
+  <view class="dvinfo-top">
+    <image src="../images/dv-info-img.png" class="info-timg"></image>
+    <view class="info-tcen" bindtap="snClick" data-statu="open">
+      <view class="info-tname">{{dName}}</view>
+      <view class="info-tsn">SN码：{{snNb}}</view>
+    </view>
+    <view class="info-ttds" bindtap="tdsClick" data-statu="open">
+      <view class="tds-nb">{{tdsVal}}</view>
+      <view class="tds-n">tds值</view>
+    </view>
+  </view>
+  <view class="dvinfo-down">
+    <view class="dvinfo-litopcom">
+      <view class="dvinfo-litop"><view class="yuan y1"></view><view class="info-n">滤芯名称</view></view>
+      <view class="dvinfo-litop"><view class="yuan y2"></view><view class="info-n">寿命(天)</view></view>
+      <view class="dvinfo-litop"><view class="yuan y3"></view><view class="info-n">已用(天)</view></view>
+    </view>
+    <view class="dvinfo-lidowncm">
+      <!-- 当前没记录时显示 begin-->
+      <view class="dvinfo-emp" wx:if="{{list.item}}">
+        <image src="../images/dv-info-emp.png" class="enm-img"></image>
+        <view class="emp-txt">添加设备滤芯↓</view>
+        <view class="emp-add"></view>
+      </view>
+      <!-- 当前没记录时显示 end -->
+      <!-- 当前有记录时显示 begin-->
+      <view class="dvinfo-com" wx:else="{{list.item}}">
+        <view class="dvilfo-dli" wx:for-items="{{list}}" wx:key="{{item.id}}">
+          <view class="dli-ali"><input class="dli-txt" type="text" value="{{item.sName}}" /></view>
+          <view class="dli-ali"><input class="dli-txt" type="text" value="{{item.sAllNb}}" /></view>
+          <view class="dli-ali"><input class="dli-txt" type="text" disabled value="{{item.sUsedNb}}" /></view>
+        </view>
+        <view class="emp-add"></view>
+      </view>
+      <!-- 当前有记录时显示 end -->
+    </view>
+  </view>
+</view>
+
+<!--tds弹出层  -->
+<view class="site-screen" bindtap="tdsClick" data-statu="close" wx:if="{{showModalTds}}"></view> 
+<view class="site-box" wx:if="{{showModalTds}}"> 
+ <view class="close-cm"><view class="btn-close" bindtap="tdsClick" data-statu="close"></view></view> 
+ <view class="site-content padd30"> 
+    <view class="site-inp"><input class="input" placeholder-class="pla-css" placeholder="请输入TDS值" value="{{tdsVal}}" bindinput="tdsInput"></input> </view>
+    <button class="site-sub">提交</button>
+ </view> 
+</view>
+
+<view class="site-screen" bindtap="snClick" data-statu="close" wx:if="{{showModalSN}}"></view> 
+<view class="site-box" wx:if="{{showModalSN}}"> 
+ <view class="close-cm"><view class="btn-close" bindtap="snClick" data-statu="close"></view></view> 
+ <view class="site-content padd30"> 
+    <view class="site-inp"><input class="input" placeholder-class="pla-css" placeholder="请输入名称" bindinput="dnInput" value="{{dName}}"></input> </view>
+    <view class="site-inp"><input class="input" placeholder-class="pla-css" placeholder="请输入SN吗" bindinput="snInput" value="{{snNb}}"></input> </view>
+    <button class="site-sub">提交</button>
+ </view> 
+</view>
+

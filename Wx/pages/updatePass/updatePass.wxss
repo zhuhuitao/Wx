@@ -1,0 +1,67 @@
+/* index.wxss */
+
+.login-padd{
+  padding: 50rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.login-txt{
+  width: 100%;
+  margin-bottom: 30rpx;
+  color:#6F6F6F;
+  border-bottom: 1px solid #DBDBDB;
+  position: relative;
+  display: flex;
+}
+.td-txt{
+  display: table-cell;
+  vertical-align:top;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 188rpx;
+}
+.login-txt .v-txt{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+}
+.login-txt .td-inp{
+  display: table-cell;
+}
+.yanzm{
+  position: absolute;
+  right: 0px;
+  padding: 0 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 20px;
+  background-color: #EF6B2B;
+  color: #fff;
+  top: 18rpx;
+  display: inline-block;
+  z-index: 9;
+  font-size:24rpx;
+  min-width: 130rpx;
+  text-align: center;
+}
+.login-ipt{
+  height: 90rpx;
+  line-height: 90rpx;
+  display: inline-block;
+  color: #191919;
+}
+.login-bt{
+  padding-top: 20rpx;
+}
+.bt-cs{
+  color: #fff;
+  background: #EF6B2B;
+  border-color: #EF6B2B;
+}
+.colr{
+  color: #191919;
+}
+.login-nwj{
+  padding-top: 40rpx;
+  color: #fff;
+}

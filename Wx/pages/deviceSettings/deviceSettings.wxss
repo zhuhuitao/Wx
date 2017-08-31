@@ -1,0 +1,35 @@
+/* deviceSettings.wxss */
+.site-li{
+  margin-top: 30rpx;
+  display: flex;
+  line-height: 50rpx;
+}
+.site-wz{
+  flex: 1;
+}
+.site-img{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  vertical-align: top;
+  margin-right:20rpx;
+}
+.site-arrow {
+  padding-right: 26rpx;
+  position: relative;
+  transition: all 0.4s ease 0s;
+}
+.site-arrow:after {
+  content: " ";
+  display: inline-block;
+  height:24rpx;
+  width: 24rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #A3A3A3;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -13rpx;
+  right: 10rpx;
+}

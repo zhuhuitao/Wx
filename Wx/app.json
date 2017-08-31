@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/deviceInfo/deviceInfo",
+    
+    "pages/searchUser/searchUser",
+    "pages/finishUser2/finishUser2",
+    "pages/finishUser/finishUser",
+    
+    "pages/index/index",
+    
+    "pages/setUp/setUp",
+    "pages/deviceSettings/deviceSettings",
+    "pages/news/news",
+    "pages/viewNews/viewNews",
+    "pages/userEdit/userEdit",
+    "pages/user/user",
+    "pages/viewUser2/viewUser2",
+    "pages/viewUser/viewUser",
+    "pages/updatePass/updatePass",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EE6C2B",
+    "navigationBarTitleText": "主页",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/nv_ico1_1.png",
+        "selectedIconPath": "pages/images/nv_ico1_2.png"
+      },
+      {
+        "pagePath": "pages/setUp/setUp",
+        "text": "设置",
+        "iconPath": "pages/images/nv_ico2_1.png",
+        "selectedIconPath": "pages/images/nv_ico2_2.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "消息",
+        "iconPath": "pages/images/nv_ico3_1.png",
+        "selectedIconPath": "pages/images/nv_ico3_2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人",
+        "iconPath": "pages/images/nv_ico4_1.png",
+        "selectedIconPath": "pages/images/nv_ico4_2.png"
+      }
+    ],
+    "color": "#454545",
+    "selectedColor": "#EF6B2B",
+    "backgroundColor": "#fff"
+  }
+}

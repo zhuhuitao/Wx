@@ -1,0 +1,64 @@
+<!--userEdit.wxml-->
+<view class="edit-top bg-fff">
+  <view class="edit-li edit-flex padd30">
+    <view class="edit-na">头像：</view>
+    <image class="edit-img" bindtap="changeAvatar" src="{{userAvatar}}" mode="aspecFill"></image>
+  </view>
+  <view class="edit-li padd30">
+    <view class="edit-na">姓名：</view>
+    <view class="edit-inp"><input type="text" placeholder="请输入姓名" value="{{userName}}" bindinput="bindName" class="editInput" /></view>
+  </view>
+  <view class="edit-li padd30">
+    <view class="edit-na">电话：</view>
+    <view class="edit-inp"><input type="text" disabled placeholder="请输入电话" value="{{userTel}}"  bindinput="bindTel" class="editInput" /></view>
+  </view>
+  <view class="edit-li padd30">
+    <view class="edit-na">邮箱：</view>
+    <view class="edit-inp"><input type="text" placeholder="请输入邮箱" value="{{userEmail}}" bindinput="bindEmail" class="editInput" /></view>
+  </view>
+</view>
+<view class="edit-dd bg-fff">
+  <view class="edit-li padd30">
+    <view class="edit-na">姓别：</view>
+    <view class="edit-inp">
+      <radio-group class="sex-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          <radio color="#EF6B2B" value="{{item.value}}" checked="{{item.checked}}"/><view class="rdo-v">{{item.value}}</view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="edit-li padd30">
+    <view class="edit-na">地址：</view>
+    <view class="edit-inp ">
+      <view class="cityClick" bindtap="open"></view>
+      <input  placeholder="请选择所在地" value="{{province}}{{city}}{{county}}"  />
+    </view>
+  </view>
+  <view class="edit-li padd30">
+    <view class="edit-na">详细地址：</view>
+    <view class="edit-inp"><input type="text" placeholder="为方便联系请填写详细地址" value="{{userDetailed}}" bindinput="bindDetailed" class="editInput" /></view>
+  </view>
+
+  <view class="edit-bt padd30">
+    <button class="btcs" bindtap="btConfirm">确定</button>
+  </view>
+
+</view>
+<view wx:if="{{condition}}" class="citypicker">
+  <picker-view indicator-class="picker-css" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view  catchtap="cityCancel" class="city-cancel">取消</view>
+      <view  catchtap="citySure" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" class="city-li">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" class="city-li">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" class="city-li">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

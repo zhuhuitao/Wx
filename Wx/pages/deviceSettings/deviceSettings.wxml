@@ -1,0 +1,12 @@
+<!--deviceSettings.wxml-->
+<view class="site-li padd30 bg-fff" bindtap="filterSet">
+  <image src="../images/s-ico1.png" class="site-img"></image>
+  <view class="site-wz">滤芯设置</view>
+  <view class="site-arrow"></view>
+</view>
+<view class="site-li padd30 bg-fff" bindtap="ResSettings">
+   <image src="../images/s-ico2.png" class="site-img"></image>
+  <view class="site-wz">恢复设置</view>
+  <view class="site-arrow"></view>
+</view>
+

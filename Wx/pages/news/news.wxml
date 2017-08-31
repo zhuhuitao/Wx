@@ -1,0 +1,11 @@
+<!--news.wxml-->
+<view class="new-h">— 系统消息中心 —</view>
+<view class="new-com">
+  <view class="new-li" wx:for-items="{{list}}" wx:key="{{item.id}}">
+    <navigator url="../viewNews/viewNews">
+      <view class="new-li-tit">{{item.title}}</view>
+      <view class="new-li-info">{{item.newInfo}}</view>
+      <view class="new-li-tm">{{item.time}}</view>
+    </navigator>
+  </view>
+</view>

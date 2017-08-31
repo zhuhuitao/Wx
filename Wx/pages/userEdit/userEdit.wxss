@@ -1,0 +1,111 @@
+/* userEdit.wxss */
+.edit-li{
+  border-bottom:1px solid #DBDBDB;
+  line-height: 1.4;
+  display: flex;
+}
+.edit-li:last-child{
+  border-bottom: none;
+}
+.edit-flex{
+  justify-content:space-between;
+}
+.edit-na{
+  color: #6F6F6F;
+}
+.edit-flex .edit-na{
+  line-height: 100rpx;
+}
+.edit-img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.edit-inp{
+  vertical-align: top;
+  flex: 1;
+  position: relative;
+}
+.cityClick{
+  position: absolute;
+  width: 100%;
+  height: 110rpx;
+  z-index: 9;
+  top: -30rpx;
+}
+.editInput{
+  line-height: 1.4;
+}
+.edit-dd{
+  margin-top: 20rpx;
+}
+.radio{
+  vertical-align:top;
+  display: inline-block;
+  margin-right:30rpx;
+
+}
+.radio radio{
+  vertical-align:top;
+  display: inline-block;
+}
+.rdo-v{
+  vertical-align:bottom;
+  display: inline-block;
+  padding-top: 6rpx;
+}
+.edit-bt{
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+.edit-bt .btcs{
+  background: #EF6B2B;
+  color: #fff;
+  border-color: #EF6B2B;
+}
+
+.citypicker{
+  position: fixed;
+  height:100%;
+  width: 100%;
+  z-index: 9;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+.citybody {
+  position: fixed;
+  bottom: 0px;
+  z-index: 9;
+  width: 100%; 
+  height: 300px;
+  background: #fff;
+}
+.city-li{
+  line-height: 50px;
+  padding-left:10px;
+}
+.cityheader {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  z-index: 4;
+  background: #fff;
+}
+
+.city-cancel {
+  float: left;
+  padding: 25rpx;
+  color: #818181;
+}
+.city-true {
+  float: right;
+  padding: 25rpx;
+  color: #EF6B2B;
+}
+
+.picker-css{
+  background: #EF6B2B;
+  z-index: 0;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+}

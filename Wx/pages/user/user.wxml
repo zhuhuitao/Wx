@@ -1,0 +1,42 @@
+<!--user.wxml-->
+<view class="user-top-com bg-fff">
+  <view class="user-top padd30">
+    <image src="../images/user-bg.png" class="user-bg"></image>
+    <view class="sign-out"><image class="sOut" src="../images/lout-ico.png"></image></view>
+    <view class="user-edit" bindtap="editClick"><image class="uEdit" src="../images/edit-ico.png"></image></view>
+    <view class="user-txzl">
+      <image src="../images/v_user_tx.jpg" class="user-img"></image>
+      <view class="user-top-xx">
+          <view class="user-tel">{{userTel}}</view>
+          <view class="user-name">姓名：{{userName}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="user-top-d padd30">
+    <view class="user-top-d1">目前已完成总维修数<view class="user-top-d1b">{{repairsNb}}</view><view class="user-top-d1c">个</view></view>
+    <view class="user-top-d2">棒棒哒，继续加油哦！</view>
+  </view>
+</view>
+<view class="user-info bg-fff">
+  <view class="info-li">
+    <view class="info-l">姓别</view>
+    <view class="info-r">{{userSex}}</view>
+  </view>
+  <view class="info-li">
+    <view class="info-l">电话</view>
+    <view class="info-r">{{userTel}}</view>
+  </view>
+  <view class="info-li">
+    <view class="info-l">邮箱</view>
+    <view class="info-r">{{userEmail}}</view>
+  </view>
+  <view class="info-li">
+    <view class="info-l">地址</view>
+    <view class="info-r">{{userAddress}}</view>
+  </view>
+  <view class="info-li">
+    <view class="info-l">详细</view>
+    <view class="info-r">{{userDetailed}}</view>
+  </view>
+</view>
+

@@ -1,0 +1,39 @@
+<!--viewUser.wxml-->
+<view class="user-info bg-fff mag-bt">
+  <view class="user-info-li padd30">
+    <view class="v-user-c6f ico4">姓名：</view>
+    <view class="v-user-cd">{{userName}} </view>
+  </view>
+  <view class="user-info-li padd30"  bindtap="userCall">
+      <view class="v-user-c6f ico1">电话：</view>
+      <view class="v-user-cd">{{userTel}} </view>
+      <image src="../images/v_user_tel.png" class="v-user-tel"></image>
+  </view>
+  <view class="user-info-li padd30">
+    <view class="v-user-c6f ico2">地址：</view>
+    <view class="v-user-cd">{{userAddress}}</view>
+  </view>
+  <view class="user-info-li padd30">
+    <view class="v-user-c6f ico3">详细：</view>
+    <view class="v-user-cd">{{userDetailed}}</view>
+  </view>
+  <image class="finish-img" src="../images/finish-img.png"></image>
+</view>
+
+<view class="user-xlh bg-fff mag-bt padd30">
+  <view class="xlh-color">设备序列号：</view>
+  <view class="xlh-nb">{{serialNb}}</view>
+</view>
+
+<view class="user-failure bg-fff mag-bt padd30">
+  <view class="user-tit">设备故障：</view>
+  <view class="user-con">
+    <view class="user-fl" wx:for-items="{{failure}}" wx:key="failure">
+      {{item}}
+    </view>
+  </view>
+</view>
+<view class="user-bz bg-fff padd30">
+  <view class="user-tit">故障备注：</view>
+  <view class="bz-con">{{beizhu}}</view>
+</view>

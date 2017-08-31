@@ -1,0 +1,49 @@
+/* login.wxss */
+page{
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#e16438), to(rgba(247,166,79,1)));  
+}
+.login-padd{
+  padding: 100rpx 50rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.login-lg{
+  padding: 20rpx 0 60rpx;
+  text-align: center;
+}
+.login-lg image{
+  width: 250rpx;
+  height: 250rpx;
+  align-items: center;
+}
+.login-txt{
+  width: 100%;
+  padding-bottom: 30rpx;
+  color: #fff;
+}
+.login-ipt{
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.login-bt{
+  padding-top: 20rpx;
+}
+.bt-cs{
+  color: #EF6725;
+}
+.colr{
+  color: #fff;
+}
+.login-nwj{
+  padding-top: 35rpx;
+  color: #fff;
+}
+.log-l{
+  float: left;
+}
+.log-r{
+  float: right;
+}

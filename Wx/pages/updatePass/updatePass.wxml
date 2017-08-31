@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="login-padd">
+    <view class="login-txt">
+      <view class="td-txt"><view class="v-txt"><text>手</text>机<text>号</text><text>码：</text></view></view>
+      <view class="td-inp">
+        <input class="login-ipt" placeholder-class="colr" placeholder="请输入手机号码" bindinput="bindMobile" />
+      </view>
+    </view>
+    <view class="login-txt">
+      <view class="td-txt"><view class="v-txt"><text>新</text>密<text>码：</text></view></view>
+      <view class="td-inp">
+        <input class="login-ipt lgpsw" placeholder-class="colr" password placeholder="请输入密码" bindinput="bindPass" />
+      </view>
+    </view>
+    <view class="login-txt">
+      <view class="td-txt"><view class="v-txt"><text>重</text>复<text>密</text><text>码：</text></view></view>
+      <view class="td-inp">
+        <input class="login-ipt lgpsw" placeholder-class="colr" password placeholder="请再次输入新密码" bindinput="bindConfigPass" />
+      </view>
+    </view>
+    <view class="login-txt">
+      <view class="td-txt"><view class="v-txt"><text>验</text>证<text>码：</text></view></view>
+      <view class="td-inp">
+        <input class="login-ipt" placeholder-class="colr" placeholder="手机验证码" bindinput="bindCode"/>
+      </view>
+      <button class="yanzm" bindtap="btCode">{{codeText}}</button>
+    </view>
+    <view class="login-bt"><button bindtap="btConfirm" class="bt-cs">确定</button></view>
+  </view>
+</view>

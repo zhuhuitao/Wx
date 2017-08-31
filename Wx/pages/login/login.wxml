@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="login-padd">
+    <view class="login-lg"><image src="../images/login-logo.png"></image></view>
+    <view class="login-txt"><input class="login-ipt" placeholder-class="colr" placeholder="登录号码" bindinput="bduser" value = "{{userName}}" /></view>
+    <view class="login-txt"><input class="login-ipt lgpsw" placeholder-class="colr" password placeholder="登录密码" bindinput="bdpsw" value = "{{userPass}}"/></view>
+    <view class="login-bt"><button bindtap="btclick" class="bt-cs">登录</button></view>
+    <view class="login-nwj clearfix">
+      <view class="log-l"><navigator url="../updatePass/updatePass">忘记密码</navigator></view>
+    </view>
+  </view>
+</view>

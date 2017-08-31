@@ -1,0 +1,21 @@
+<!--siteUp.wxml-->
+<view class="site-li padd30 bg-fff" bindtap="powerDrawer" data-statu="open">
+  <view class="site-wz">手动输入设备SN码</view>
+  <view class="site-arrow"></view>
+</view>
+<view class="site-li padd30 bg-fff" bindtap="wxScanCode">
+  <view class="site-wz">自动扫描设备SN码</view>
+  <view class="site-arrow"></view>
+</view>
+
+<!--mask-->
+<view class="site-screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="site-box" wx:if="{{showModalStatus}}"> 
+ <view class="close-cm"><view class="btn-close" bindtap="powerDrawer" data-statu="close"></view></view> 
+ <view class="site-content padd30"> 
+    <view class="site-inp"><input class="input" placeholder-class="pla-css" placeholder="请输入产品SN号" bindinput="siteInput"></input> </view>
+    <button class="site-sub" bindtap="btnSN">提交</button>
+ </view> 
+</view>

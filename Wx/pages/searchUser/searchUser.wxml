@@ -1,0 +1,20 @@
+<!--searchUser.wxml-->
+<view class="search-padd padd30">
+  <view class="search-cm">
+    <input class="search-txt" placeholder="请输入手机号码" bindinput="searchInput" />
+    <view class="search-btn" bindtap="searchBtn"></view>
+  </view>
+  <view class="search-list" wx:if="gongdan">
+    <view class="search-li" wx:for-items="{{list}}">
+      <navigator url="{{item.sUrl}}">
+        <view class="search-time">{{item.beginTime}} ~ {{item.finishTime}}</view>
+        <view class="search-name"><view class="name">{{item.sName}}</view><view class="tel">{{item.sTel}}</view></view>
+        <view class="search-sn"><view class="sn-bt">设备序列号：</view><view class="sn-nb">{{item.sSN}}</view></view>
+      </navigator>
+    </view>
+  </view>
+  <view class="search-emp" wx:else="gongdan">
+    未找到相应工单
+  </view>
+  
+</view>

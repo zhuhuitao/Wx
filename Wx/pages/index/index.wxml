@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view class="t-nav-tab swiper-tab">
+  <view class="nav-tab-li tab-li1 {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+      设备维护
+  </view>
+  <view class="nav-tab-li tab-li2 {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+    维修申请
+  </view>
+  <view class="nav-tab-li tab-li3 {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">
+     历史工单
+  </view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="200" style="height:{{winHeight - 60?winHeight - 60+'px':'auto'}}"  bindchange="bindChange">  
+    <!--设备维护begin  -->
+    <swiper-item>  
+      <scroll-view wx:if="{{weihu}}" scroll-y="{{true}}" style="height: {{winHeight - 60?winHeight - 60+'px':'auto'}}">
+        <view class="swip-box-emp">
+            <image class="box-emp-img" src="../images/emp_ico.png"></image>
+            <text class="box-emp-txt">当前还木有工单哦！</text>
+        </view>  
+      </scroll-view>
+
+      <scroll-view wx:else="{{weihu}}" bindscrolltoupper="onRefresh" bindscrolltolower="onDataLoad" scroll-y="{{true}}" style="height: {{winHeight - 60?winHeight - 60+'px':'auto'}}">
+        <view class="index-bd">
+          <view class="list-num">目前工单任务<text class="num">{{total}}</text><text class="num-n">个</text></view>
+          <view class="kind-list">
+            <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+              <view class="kind-list-item">
+                <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+                  <view class="kind-list-text">工单号:{{item.id}}</view>
+                  <view class="navigator-arrow"></view>
+                </view>
+                <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+                  <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+                    <block wx:for-items="{{item.content}}" wx:for-item="content" wx:key="*item">
+                      <navigator url="../viewUser/viewUser" class="navigator">
+                        <view class="navigator-time {{content.status}}">{{content.time}}</view>
+                        <view class="navigator-text">{{content.name}}</view>
+                        <view class="navigator-ques">{{content.question}}</view>
+                      </navigator>
+                    </block>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </scroll-view>
+
+    </swiper-item>  
+    <!--设备维护end  -->
+    <!--维修申请begin  -->
+    <swiper-item>  
+      <scroll-view wx:if="{{weixiu}}" scroll-y="{{true}}" style="height: {{winHeight - 60?winHeight - 60+'px':'auto'}}"  >
+        <view class="swip-box-emp">
+            <image class="box-emp-img" src="../images/emp_ico.png"></image>
+            <text class="box-emp-txt">当前还木有工单哦！</text>
+        </view>  
+      </scroll-view>
+      <scroll-view wx:else="{{weixiu}}" scroll-y="{{true}}" style="height: {{winHeight - 60?winHeight - 60+'px':'auto'}}"
+      bindscrolltolower="onLoadMore" bindscrolltoupper="onFreshMore" upper-threshold = "6px" lower-threshold = "6px">
+        <view class="index-bd">
+        <view wx:if = "{{isRefresh}}" class="refresh">...正在刷新</view> 
+          <view class="list-num">目前工单任务<text class="num">{{wxTotal}}</text><text class="num-n">个</text></view>
+          <view class="weixiu-list">
+            <block wx:for-items="{{wxlist}}" wx:key="{{item.id}}">
+              <navigator url="../viewUser2/viewUser2">
+                <view class="weixiu-li {{item.wxzhuant ? 'on' : ''}}">
+                  <view class="wx-zhuant {{item.wxzhuant ? 'on' : ''}}">{{item.wxStatus}}</view>
+                  <view class="wx-time">{{item.wxTime}}</view>
+                  <view class="wx-nandt"><view class="wx-n">{{item.wxName}}</view><view class="wx-tel">{{item.wxTel}}</view></view>
+                  <view class="wx-snnb"><view>设备序列号：</view><view class="wxsn">{{item.wxSN}}</view></view>
+                  <view class="wx-problem">
+                    <view class="wx-proli" wx:for-items="{{item.wxProblem}}" wx:for-item="wxProblem">{{wxProblem}}</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+          </view>
+          <view wx:if = "{{isLoad}}" class="refresh">...正在加载</view> 
+        </view>
+      </scroll-view>
+
+    </swiper-item> 
+     <!--维修申请end  -->
+     <!--历史工单begin  -->
+    <swiper-item>  
+      <view>历史工单</view>  
+    </swiper-item>  
+    <!--历史工单end  -->
+</swiper>  
